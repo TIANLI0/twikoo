@@ -122,6 +122,14 @@ const fn = {
           14: 'Upside Down Cake',
           15: 'Vanilla Ice Cream'
         }[majorPlatformVersion]
+      } else if (os.name === 'HarmonyOS') {
+        const majorPlatformVersion = os.version.split('.')[0]
+        os.versionName = {
+          2: 'HarmonyOS 2',
+          3: 'HarmonyOS 3',
+          4: 'HarmonyOS 4',
+          5: 'HarmonyOS Next'
+        }[majorPlatformVersion]
       }
     }
     return os
